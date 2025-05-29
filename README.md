@@ -165,6 +165,7 @@ if err := p.Produce(
   msg,   // The message to produce
   topic, // The topic to produce to
   key,   // The key to produce to
+  5 * time.Second, // The timeout for the produce operation
 ); err != nil {
 	log.Println(err)
 }
